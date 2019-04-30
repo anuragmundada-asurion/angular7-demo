@@ -11,8 +11,8 @@
       <th>Population</th>
     </tr>
     </thead>
-    <tbody>
-    <tr *ngFor="let country of countries; let i = index;">
+    <tbody cdkDropList (cdkDropListDropped)="drop($event)" >
+    <tr *ngFor="let country of countries; let i = index;" cdkDrag>
       <td>{{i+1}}</td>
       <td>{{country.name}}</td>
       <td>{{country.capital}}</td>

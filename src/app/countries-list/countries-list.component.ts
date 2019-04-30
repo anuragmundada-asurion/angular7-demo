@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "../services/data.service";
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-countries-list',
@@ -9,8 +10,8 @@ import {DataService} from "../services/data.service";
 export class CountriesListComponent implements OnInit {
 
   keyword: string = '';
-  countries: any = [];
-  filteredCountries: any = [];
+  countries = [];
+  filteredCountries = [];
 
   constructor(private dataService: DataService) { }
 
@@ -28,5 +29,9 @@ export class CountriesListComponent implements OnInit {
       })
     });
   };
+
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.countries, event.previousIndex, event.currentIndex);
+  }
 
 }

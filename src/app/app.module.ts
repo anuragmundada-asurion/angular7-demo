@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { CountriesListComponent } from './countries-list/countries-list.component';
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from "@angular/forms";
+import {DragDropModule} from "@angular/cdk/drag-drop";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
