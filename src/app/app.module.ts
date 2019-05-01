@@ -11,6 +11,7 @@ import { CountriesListComponent } from './countries-list/countries-list.componen
 import { HomeComponent } from './home/home.component';
 import {FormsModule} from "@angular/forms";
 import {DragDropModule} from "@angular/cdk/drag-drop";
+import { TrackerComponent } from './tracker/tracker.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {DragDropModule} from "@angular/cdk/drag-drop";
     HeaderComponent,
     FooterComponent,
     CountriesListComponent,
-    HomeComponent
+    HomeComponent,
+    TrackerComponent
   ],
   imports: [
     BrowserModule,
